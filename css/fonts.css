@@ -1,0 +1,20 @@
+/* Tokens + fontstack */
+:root{
+  --tv-blue:#3190fe;
+  --tv-dark:#2c3e50;
+  --tv-accent:#1abc9c;
+  --tv-bg:#f4f7f9;
+  --tv-text:#333333;
+}
+
+
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,'Noto Sans','Liberation Sans',sans-serif;
+  color:var(--tv-text);
+  background:var(--tv-bg);
+}
+
+
+a{ color:var(--tv-blue); }
+.text-tv-dark{ color:var(--tv-dark); }
+.btn-tv{ background:var(--tv-blue); border-color:var(--tv-blue); }

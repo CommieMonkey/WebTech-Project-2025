@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home · Thomas Van Aert</title>
+
+
+  <!-- Bootstrap 5 declaratie -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- persoonlijke CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+
+<body>
+
+
+
+<header class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="assets/images/logo.png" alt="Logo" width="28" height="28">
+      <span>Thomas Van Aert</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+            aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <nav id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Projecten</a></li>
+        <li class="nav-item"><a class="nav-link" href="project.html">Projectdetail</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+<main class="container">
+  <!-- Hero / foto + intro -->
+  <section class="hero my-4">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-tv-dark">Hallo, ik ben Thomas</h1>
+        <p class="lead">Student <strong>System &amp; Network Management</strong>. Ik bouw en beheer betrouwbare netwerken,
+          automatiseer met scripts en bewaak systemen met moderne tooling.</p>
+        <div class="d-flex gap-2">
+          <a class="btn btn-primary btn-tv" href="portfolio.html">Bekijk mijn projecten</a>
+          <a class="btn btn-outline-secondary" href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <img src="assets/images/banner.jpeg" class="placeholder-img rounded" alt="Image">
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Skills / Portfolio gedeelte -->
+  <section class="my-5">
+    <h2 class="section-title mb-3">Vaardigheden</h2>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card p-3 h-100">
+          <h3 class="h5">Netwerkbeheer</h3>
+          <p>Routing &amp; switching, VLAN, DHCP/DNS, firewalling, VPN.</p>
+          <span class="badge badge-tech">Cisco · MikroTik</span>
+        </div>
+      </div>
+
+
+      <div class="col-md-4">
+        <div class="card p-3 h-100">
+          <h3 class="h5">Servers &amp; OS</h3>
+          <p>Windows Server, Linux, virtualisatie, AD, file services.</p>
+          <span class="badge badge-tech">Windows · AlmaLinux</span>
+        </div>
+      </div>
+
+
+      <div class="col-md-4">
+        <div class="card p-3 h-100">
+          <h3 class="h5">Monitoring &amp; Automation</h3>
+          <p>Zabbix, PowerShell, Bash, Ansible (basis), scripting.</p>
+          <span class="badge badge-tech">Zabbix · PowerShell</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Recente projecten (3 cards) -->
+  <section class="my-5">
+    <h2 class="section-title mb-3">Recente projecten</h2>
+    <div class="row g-4">
+      <!-- Project card 1 -->
+      <div class="col-md-4">
+        <article class="card h-100">
+          <img src="assets/images/vlan.png" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h3 class="h5">Project 1: VLAN & DHCP</h3>
+            <p class="card-text">Netwerksegmentatie met 3 VLAN’s, DHCP-scopes en inter-VLAN routing.</p>
+            <a href="project.html" class="btn btn-sm btn-outline-primary">Lees meer</a>
+          </div>
+        </article>
+      </div>
+
+
+
+      <!-- Project card 2 -->
+      <div class="col-md-4">
+        <article class="card h-100">
+          <img src="assets/images/kabels.jpg" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h3 class="h5">Project 2: Windows Server</h3>
+            <p class="card-text">AD DS, DNS, shares en NTFS-rechten; deployment met PowerShell.</p>
+            <a href="project.html" class="btn btn-sm btn-outline-primary">Lees meer</a>
+          </div>
+        </article>
+      </div>
+
+
+
+      <!-- Projecten card 3 -->
+      <div class="col-md-4">
+        <article class="card h-100">
+          <img src="assets/images/schermen.jpg" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h3 class="h5">Project 3: Monitoring</h3>
+            <p class="card-text">Zabbix-templates, triggers en dashboards voor server-uptime.</p>
+            <a href="project.html" class="btn btn-sm btn-outline-primary">Lees meer</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+
+<footer class="mt-5 py-4">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+    <small>© 2025 Thomas Van Aert — System &amp; Network Management</small>
+    <div class="d-flex gap-3">
+      <a href="#">LinkedIn</a>
+      <a href="https://github.com/CommieMonkey">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
