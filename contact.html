@@ -43,20 +43,27 @@
 
     <div class="row g-4">
       <div class="col-lg-7">
-        <form class="card p-3" onsubmit="event.preventDefault(); alert('Bedankt! Dit is een demo-form zonder backend.');">
-          <div class="mb-3">
-            <label for="name" class="form-label">Naam</label>
-            <input id="name" name="name" type="text" class="form-control" placeholder="Jouw naam" required>
+        <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+          <div class="form-group">
+            <label for="name">Naam:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
           </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">E-mail</label>
-            <input id="email" name="email" type="email" class="form-control" placeholder="naam@voorbeeld.be" required>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
           </div>
-          <div class="mb-3">
-            <label for="msg" class="form-label">Bericht</label>
-            <textarea id="msg" name="message" rows="6" class="form-control" placeholder="Waarmee kan ik helpen?" required></textarea>
+          <div class="form-group">
+            <label for="subject">Onderwerp:</label>
+            <input type="text" class="form-control" id="subject" name="subject" required>
           </div>
-          <button class="btn btn-primary btn-tv" type="submit">Verzenden</button>
+          <div class="form-group">
+            <label for="message">Bericht:</label>
+            <textarea class="form-control" rows="10" id="message" name="message" required></textarea>
+          </div>
+          <div class="form-group">
+            <div data-netlify-recaptcha="true"></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
 
