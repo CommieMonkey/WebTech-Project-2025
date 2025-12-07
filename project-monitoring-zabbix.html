@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoring met Zabbix · Portfolio Thomas Van Aert</title>
+
+  <link href="css/reset.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous" defer></script>
+
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body class="p-3 m-0 border-0 bd-example">
+<nav class="navbar navbar-expand-md navbar-dark bg-tv-blue">
+<div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/logo.png" alt="Portfolio Thomas Van Aert" width="80" height="80">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Navigatie openen">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">home</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">projecten</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">contact</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <header class="row m-5">
+
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <main class="col-md-9 pe-3">
+        <h1 class="section-title">
+          Monitoring met Zabbix
+        </h1>
+        <article class="mb-4">
+          <header class="mb-3">
+            <h2 class="h3">Bewaking van servers en netwerkapparatuur</h2>
+            <p class="text-muted mb-0">
+              Opzetten van een Zabbix-server met hosts, templates, triggers en e-mailalerts.
+            </p>
+          </header>
+
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <figure>
+                <img src="assets/images/schermen.jpg" class="img-fluid rounded"
+                  alt="Zabbix dashboard met grafieken en hoststatussen">
+                <figcaption class="mt-2 small text-muted">
+                  Voorbeeld van een Zabbix-dashboard met CPU- en geheugengrafieken van meerdere hosts.
+                </figcaption>
+              </figure>
+            </div>
+            <aside class="col-lg-5">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h3 class="h5">Projectoverzicht</h3>
+                  <ul class="mb-3">
+                    <li>Installatie van Zabbix-server op Linux</li>
+                    <li>Hosts toevoegen voor servers en switches</li>
+                    <li>Gebruik van templates en eigen items</li>
+                    <li>E-mailalerts bij kritieke triggers</li>
+                  </ul>
+                  <h4 class="h6">Tools &amp; technologieën</h4>
+                  <ul class="mb-0">
+                    <li>Zabbix server &amp; agent</li>
+                    <li>Linux (AlmaLinux / Ubuntu)</li>
+                    <li>SNMP &amp; agent-based monitoring</li>
+                    <li>SMTP voor meldingen</li>
+                  </ul>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </article>
+
+        <section class="mb-4">
+          <h2 class="h4">Aanpak</h2>
+          <ol>
+            <li>Zabbix-server installeren op een Linux-VM en de webinterface configureren.</li>
+            <li>Hosts aanmaken voor servers en netwerkapparatuur; agents installeren waar nodig.</li>
+            <li>Templates koppelen (Linux server, Windows server, SNMP devices) en extra items toevoegen.</li>
+            <li>Triggers aanpassen voor CPU, geheugen, disk en ping-latency.</li>
+            <li>E-mailmeldingen configureren met een testaccount en alerts testen.</li>
+          </ol>
+        </section>
+
+        <section class="mb-4">
+          <h2 class="h4">Resultaat</h2>
+          <p>
+            Probleemmeldingen komen nu veel sneller naar voren in plaats van pas op te vallen bij gebruikers.
+            Dankzij grafieken en historie is het makkelijker om trends te zien en capaciteit op tijd uit te breiden.
+          </p>
+        </section>
+
+        <p>
+          <a href="portfolio.html" class="btn btn-outline-secondary btn-sm">&laquo; Terug naar projecten</a>
+        </p>
+      </main>
+
+      <aside class="col-md-3 border-start ps-5">
+        <section class="pt-3">
+          <h2 class="text-uppercase fs-5 fw-bolder">samenvatting</h2>
+          <p class="mb-2">
+            Met monitoring voorkom je verrassingen. Dit project toont hoe je een relatief klein netwerk
+            al veel inzichtelijker maakt.
+          </p>
+        </section>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="container-fluid bg-light text-center h6 small p-4 mt-5">
+    &copy; <span id="year"></span> Portfolio Thomas Van Aert
+  </footer>
+</body>
+
+</html>

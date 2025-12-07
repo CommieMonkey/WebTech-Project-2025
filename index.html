@@ -1,170 +1,220 @@
-<!doctype html>
-<html lang="nl">
+<!DOCTYPE html>
+<html lang="nl-BE">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home · Thomas Van Aert</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home · Portfolio Thomas Van Aert</title>
 
+  <!-- reset css -->
+  <link href="css/reset.css" rel="stylesheet">
 
-  <!-- Bootstrap 5 declaratie -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <!-- persoonlijke CSS -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap Bundle JS (met Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous" defer></script>
+
+  <!-- eigen css -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- eigen js -->
+  <script src="js/main.js" defer></script>
 </head>
 
+<body class="p-3 m-0 border-0 bd-example">
+  <!-- NAVBAR in labo-stijl -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-tv-blue">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/logo.png" alt="Portfolio Thomas Van Aert" width="80" height="80">
+      </a>
 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Navigatie openen">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<body>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="portfolio.html">projecten</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">contact</a>
+          </li>
+        </ul>
 
+      </div>
+    </div>
+  </nav>
 
+  <!-- HEADER -->
+  <header class="row m-5">
 
-<header class="navbar navbar-expand-lg sticky-top">
+  </header>
+
+  <!-- LAYOUT: main + aside -->
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-      <img src="assets/images/logo.png" alt="Logo" width="28" height="28">
-      <span>Thomas Van Aert</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
-            aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <nav id="nav" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="portfolio.html">Projecten</a></li>
-        <li class="nav-item"><a class="nav-link" href="project.html">Projectdetail</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="row">
+      <main class="col-md-9 pe-3">
+        <h1 class="col display-3 text-center">
+          Portfolio<br>Thomas Van Aert
+        </h1>
+        <!-- HERO -->
+        <section class="mb-5">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <h2 class="h2 mb-3">Hallo, ik ben Thomas</h2>
+              <p class="lead">
+                Student <strong>System &amp; Network Management</strong>. Ik ontwerp en beheer netwerken,
+                automatiseer beheertaken en monitor systemen zodat ze stabiel en veilig blijven draaien.
+              </p>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-primary" href="portfolio.html">Bekijk mijn projecten</a>
+                <a class="btn btn-outline-secondary" href="contact.html">Contact opnemen</a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <figure class="mb-0">
+                <img src="assets/images/banner.jpeg" class="img-fluid rounded" alt="Overzicht IT-infrastructuur">
+                <figcaption class="mt-2 small text-muted">
+                  Visualisatie van infrastructuur en netwerken waarmee ik graag werk.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <!-- VAARDIGHEDEN -->
+        <section class="mb-5">
+          <h2 class="h3 mb-3">Vaardigheden</h2>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <article class="card h-100">
+                <div class="card-body">
+                  <h3 class="h5">Netwerkbeheer</h3>
+                  <p class="mb-2">Routing &amp; switching, VLAN, DHCP/DNS, firewalling, VPN.</p>
+                  <p class="mb-0 small text-muted">Cisco · MikroTik · Packet Tracer</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="card h-100">
+                <div class="card-body">
+                  <h3 class="h5">Servers &amp; OS</h3>
+                  <p class="mb-2">Windows Server, Linux, virtualisatie, Active Directory, file services.</p>
+                  <p class="mb-0 small text-muted">Windows Server · AlmaLinux · Hyper-V</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="card h-100">
+                <div class="card-body">
+                  <h3 class="h5">Monitoring &amp; Automation</h3>
+                  <p class="mb-2">Zabbix, PowerShell, Bash, basis Ansible.</p>
+                  <p class="mb-0 small text-muted">Zabbix · PowerShell · scripting</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- RECENTE PROJECTEN (3 kaarten) -->
+        <section class="mb-5">
+          <h2 class="h3 mb-3">Recente projecten</h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <article class="card h-100">
+                <figure class="mb-0">
+                  <img src="assets/images/vlan.png" class="card-img-top" alt="Netwerk met VLAN en DHCP">
+                  <figcaption class="small text-muted p-2">
+                    Netwerk met meerdere VLAN’s en centrale DHCP-server.
+                  </figcaption>
+                </figure>
+                <div class="card-body">
+                  <h3 class="h5">VLAN &amp; DHCP</h3>
+                  <p class="card-text">Segmentatie van een bedrijfsnetwerk met drie VLAN’s en router-on-a-stick.</p>
+                  <a href="project-vlan-dhcp.html" class="btn btn-sm btn-outline-primary">Lees meer</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-4">
+              <article class="card h-100">
+                <figure class="mb-0">
+                  <img src="assets/images/kabels.jpg" class="card-img-top" alt="Windows Server-domein">
+                  <figcaption class="small text-muted p-2">
+                    Domeinstructuur met OU’s, groepen en shares.
+                  </figcaption>
+                </figure>
+                <div class="card-body">
+                  <h3 class="h5">Windows Server-domein</h3>
+                  <p class="card-text">Opzetten van AD DS, DNS, shares en NTFS-rechten voor een kleine organisatie.</p>
+                  <a href="project-windows-server.html" class="btn btn-sm btn-outline-primary">Lees meer</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-4">
+              <article class="card h-100">
+                <figure class="mb-0">
+                  <img src="assets/images/schermen.jpg" class="card-img-top" alt="Monitoring met Zabbix">
+                  <figcaption class="small text-muted p-2">
+                    Dashboards met server- en netwerkmetriek in Zabbix.
+                  </figcaption>
+                </figure>
+                <div class="card-body">
+                  <h3 class="h5">Monitoring met Zabbix</h3>
+                  <p class="card-text">Configuratie van hosts, templates, triggers en e-mailalerts.</p>
+                  <a href="project-monitoring-zabbix.html" class="btn btn-sm btn-outline-primary">Lees meer</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <aside class="col-md-3 border-start ps-5">
+        <section class="pt-3">
+          <h2 class="text-uppercase fs-5 fw-bolder">contact</h2>
+          <p class="mb-1">Thomas Van Aert</p>
+          <p class="mb-1">
+            <a href="mailto:thomas@example.com">thomas@example.com</a>
+          </p>
+          <p class="mb-3">Regio Brecht / Antwerpen</p>
+
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="#" target="_blank" aria-label="LinkedIn">
+                <i class="bi bi-linkedin fs-5"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" target="_blank" aria-label="GitHub">
+                <i class="bi bi-github fs-5"></i>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </aside>
+    </div>
   </div>
-</header>
 
-
-
-<main class="container">
-  <!-- Hero / foto + intro -->
-  <section class="hero my-4">
-    <div class="row g-4 align-items-center">
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold text-tv-dark">Hallo, ik ben Thomas</h1>
-        <p class="lead">Student <strong>System &amp; Network Management</strong>. Ik bouw en beheer betrouwbare netwerken,
-          automatiseer met scripts en bewaak systemen met moderne tooling.</p>
-        <div class="d-flex gap-2">
-          <a class="btn btn-primary btn-tv" href="portfolio.html">Bekijk mijn projecten</a>
-          <a class="btn btn-outline-secondary" href="contact.html">Contact</a>
-        </div>
-      </div>
-
-      <div class="col-lg-6">
-        <img src="assets/images/banner.jpeg" class="placeholder-img rounded" alt="Image">
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <!-- Skills / Portfolio gedeelte -->
-  <section class="my-5">
-    <h2 class="section-title mb-3">Vaardigheden</h2>
-    <div class="row g-3">
-      <div class="col-md-4">
-        <div class="card p-3 h-100">
-          <h3 class="h5">Netwerkbeheer</h3>
-          <p>Routing &amp; switching, VLAN, DHCP/DNS, firewalling, VPN.</p>
-          <span class="badge badge-tech">Cisco · MikroTik</span>
-        </div>
-      </div>
-
-
-      <div class="col-md-4">
-        <div class="card p-3 h-100">
-          <h3 class="h5">Servers &amp; OS</h3>
-          <p>Windows Server, Linux, virtualisatie, AD, file services.</p>
-          <span class="badge badge-tech">Windows · AlmaLinux</span>
-        </div>
-      </div>
-
-
-      <div class="col-md-4">
-        <div class="card p-3 h-100">
-          <h3 class="h5">Monitoring &amp; Automation</h3>
-          <p>Zabbix, PowerShell, Bash, Ansible (basis), scripting.</p>
-          <span class="badge badge-tech">Zabbix · PowerShell</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- Recente projecten (3 cards) -->
-  <section class="my-5">
-    <h2 class="section-title mb-3">Recente projecten</h2>
-    <div class="row g-4">
-      <!-- Project card 1 -->
-      <div class="col-md-4">
-        <article class="card h-100">
-          <img src="assets/images/vlan.png" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h3 class="h5">Project 1: VLAN & DHCP</h3>
-            <p class="card-text">Netwerksegmentatie met 3 VLAN’s, DHCP-scopes en inter-VLAN routing.</p>
-            <a href="project.html" class="btn btn-sm btn-outline-primary">Lees meer</a>
-          </div>
-        </article>
-      </div>
-
-
-
-      <!-- Project card 2 -->
-      <div class="col-md-4">
-        <article class="card h-100">
-          <img src="assets/images/kabels.jpg" class="card-img-top" alt="Project 2">
-          <div class="card-body">
-            <h3 class="h5">Project 2: Windows Server</h3>
-            <p class="card-text">AD DS, DNS, shares en NTFS-rechten; deployment met PowerShell.</p>
-            <a href="project.html" class="btn btn-sm btn-outline-primary">Lees meer</a>
-          </div>
-        </article>
-      </div>
-
-
-
-      <!-- Projecten card 3 -->
-      <div class="col-md-4">
-        <article class="card h-100">
-          <img src="assets/images/schermen.jpg" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h3 class="h5">Project 3: Monitoring</h3>
-            <p class="card-text">Zabbix-templates, triggers en dashboards voor server-uptime.</p>
-            <a href="project.html" class="btn btn-sm btn-outline-primary">Lees meer</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-</main>
-
-
-
-
-<footer class="mt-5 py-4">
-  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-    <small>© 2025 Thomas Van Aert — System &amp; Network Management</small>
-    <div class="d-flex gap-3">
-      <a href="#">LinkedIn</a>
-      <a href="https://github.com/CommieMonkey">GitHub</a>
-    </div>
-  </div>
-</footer>
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <footer class="container-fluid bg-light text-center h6 small p-4 mt-5">
+    &copy; <span id="year"></span> Portfolio Thomas Van Aert
+  </footer>
 </body>
+
 </html>

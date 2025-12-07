@@ -1,20 +1,115 @@
-/* Site styles */
-header.navbar{ background:#fff; border-bottom:1px solid #e6ecf2; }
+/* Lay-out & components */
 
-.navbar-brand{ font-weight:700; color:var(--tv-dark); }
+header.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e6ecf2;
+}
 
-.hero{ background:#fff; border:1px solid #e6ecf2; border-radius:.75rem; padding:1.25rem; }
+/* nieuwe navbar (offcanvas + desktop) */
+.bg-tv-dark {
+  background-color: var(--tv-dark) !important;
+}
 
-.section-title{ color:var(--tv-dark); font-weight:800; }
+.navbar-brand {
+  font-weight: 700;
+}
 
-.card{ border-radius:.75rem; box-shadow:0 2px 8px rgba(0,0,0,.04); }
+.navbar-nav .nav-link {
+  color: #ffffff;
+}
 
-.badge-tech{ background:var(--tv-accent); }
+.navbar-nav .nav-link.active {
+  font-weight: 600;
+  position: relative;
+}
 
-footer{ color:#fff; background:var(--tv-dark); }
+.navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.15rem;
+  width: 100%;
+  height: 2px;
+  background: var(--tv-accent);
+}
 
-footer a{ color:#fff; text-decoration:underline; }
+/* hero / sections */
 
-main{ padding-top:1rem; padding-bottom:2rem; }
+.hero {
+  background: #ffffff;
+  border: 1px solid #e6ecf2;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
 
-.placeholder-img{ width:100%; height:auto; }
+.section-title {
+  color: var(--tv-dark);
+  font-weight: 800;
+}
+
+/* cards */
+
+.card {
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* kleine badge in accentkleur */
+.badge-tech {
+  background: var(--tv-accent);
+  color: #ffffff;
+}
+
+/* map */
+
+.map-wrapper {
+  height: 320px;
+  border-radius: 0.75rem;
+  border: 1px solid #e6ecf2;
+  overflow: hidden;
+}
+
+/* footer */
+
+footer {
+  color: #ffffff;
+  background: var(--tv-dark);
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+main {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+/* figure */
+
+figure {
+  margin: 0 0 1rem;
+}
+
+figcaption {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+/* kleine helper voor placeholder images */
+
+.placeholder-img {
+  width: 100%;
+  height: auto;
+}
+
+:root {
+  --tv-blue: #3190fe;
+}
+
+/* eigen blauwe achtergrond voor de navbar */
+.bg-tv-blue {
+  background-color: var(--tv-blue) !important;
+}
+
