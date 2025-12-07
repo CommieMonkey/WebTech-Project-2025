@@ -1,4 +1,4 @@
-// js/map.js
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const mapElement = document.getElementById("map");
@@ -7,13 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  // Zorg dat Leaflet bestaat (CDN in contact.html)
   if (typeof L === "undefined") {
     console.error("Leaflet (L) is niet geladen.");
     return;
   }
 
-  // Coördinaten Brecht (ongeveer)
+  // Coördinaten Brecht
   const brecht = [51.3497, 4.6377];
 
   const map = L.map("map").setView(brecht, 13);
