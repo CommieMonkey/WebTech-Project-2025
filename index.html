@@ -32,30 +32,33 @@
 <body class="p-3 m-0 border-0 bd-example">
   <!-- NAVBAR in labo-stijl -->
   <nav class="navbar navbar-expand-md navbar-dark bg-tv-blue">
-  <div class="container-fluid">
+    <div class="container-fluid">
       <a class="navbar-brand" href="index.html">
         <img src="assets/images/logo.png" alt="Portfolio Thomas Van Aert" width="80" height="80">
       </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Navigatie openen">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Navigatie openen">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">home</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">projecten</a></li>
+          <li class="nav-item"><a class="nav-link" href="over-mij.html">over mij</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="aanpak.html">mijn aanpak</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">contact</a></li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">home</a>
+            <button id="themeToggle"
+                    class="btn btn-outline-light btn-sm ms-2"
+                    type="button"
+                    aria-label="Toggle dark mode">
+              <i class="bi bi-moon"></i>
+            </button>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="portfolio.html">projecten</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">contact</a>
-          </li>
-        </ul>
 
+        </ul>
       </div>
     </div>
   </nav>
@@ -191,18 +194,18 @@
           <h2 class="text-uppercase fs-5 fw-bolder">contact</h2>
           <p class="mb-1">Thomas Van Aert</p>
           <p class="mb-1">
-            <a href="mailto:thomas@example.com">thomas@example.com</a>
+            <a href="mailto:thomasvanaert03@gmail.com">thomasvanaert03@gmail.com</a>
           </p>
           <p class="mb-3">Regio Brecht / Antwerpen</p>
 
           <ul class="list-inline">
             <li class="list-inline-item">
-              <a href="#" target="_blank" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/thomas-van-aert-159058260/" target="_blank" aria-label="LinkedIn">
                 <i class="bi bi-linkedin fs-5"></i>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#" target="_blank" aria-label="GitHub">
+              <a href="https://github.com/CommieMonkey" target="_blank" aria-label="GitHub">
                 <i class="bi bi-github fs-5"></i>
               </a>
             </li>

@@ -1,84 +1,45 @@
-/* Lay-out & components */
+/* =========================================
+   THEME (Light default) + Dark variant
+========================================= */
 
-header.navbar {
-  background: #ffffff;
-  border-bottom: 1px solid #e6ecf2;
+:root {
+  /* Brand */
+  --tv-blue: #3190fe;
+
+  /* Theme */
+  --bg-main: #f4f8ff;
+  --bg-surface: #ffffff;
+  --bg-nav: var(--tv-blue);
+
+  --text-main: #1a1a1a;
+  --text-muted: #6c757d;
+
+  --border-soft: #e0e6ef;
+
+  /* UI */
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+  --radius-sm: 0.6rem;
 }
 
-/* nieuwe navbar (offcanvas + desktop) */
-.bg-tv-dark {
-  background-color: var(--tv-dark) !important;
+body.dark-mode {
+  --bg-main: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-nav: #0b1220;
+
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+
+  --border-soft: #334155;
 }
 
-.navbar-brand {
-  font-weight: 700;
-}
+/* =========================================
+   BASE
+========================================= */
 
-.navbar-nav .nav-link {
-  color: #ffffff;
-}
-
-.navbar-nav .nav-link.active {
-  font-weight: 600;
-  position: relative;
-}
-
-.navbar-nav .nav-link.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0.15rem;
-  width: 100%;
-  height: 2px;
-  background: var(--tv-accent);
-}
-
-/* hero / sections */
-
-.hero {
-  background: #ffffff;
-  border: 1px solid #e6ecf2;
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-}
-
-.section-title {
-  color: var(--tv-dark);
-  font-weight: 800;
-}
-
-/* cards */
-
-.card {
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
-
-/* kleine badge in accentkleur */
-.badge-tech {
-  background: var(--tv-accent);
-  color: #ffffff;
-}
-
-/* map */
-
-.map-wrapper {
-  height: 320px;
-  border-radius: 0.75rem;
-  border: 1px solid #e6ecf2;
-  overflow: hidden;
-}
-
-/* footer */
-
-footer {
-  color: #ffffff;
-  background: var(--tv-dark);
-}
-
-footer a {
-  color: #ffffff;
-  text-decoration: underline;
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
 }
 
 main {
@@ -86,7 +47,137 @@ main {
   padding-bottom: 2rem;
 }
 
-/* figure */
+/* Content “canvas” (jouw afgeronde witte vlak) */
+.container {
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Bootstrap helper */
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* =========================================
+   NAVBAR (buttons)
+========================================= */
+
+.navbar,
+.bg-tv-blue {
+  background-color: var(--bg-nav) !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+/* maak van links duidelijke knoppen */
+.navbar .nav-link {
+  display: inline-block;
+  padding: 0.45rem 0.85rem;
+  margin: 0.15rem 0.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-decoration: none;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #ffffff !important;
+}
+
+/* Active state - Light */
+body:not(.dark-mode) .navbar .nav-link.active,
+body:not(.dark-mode) .navbar .nav-link[aria-current="page"] {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* Active state - Dark */
+body.dark-mode .navbar .nav-link.active,
+body.dark-mode .navbar .nav-link[aria-current="page"] {
+  background-color: rgba(49, 144, 254, 0.25);
+  border-color: rgba(49, 144, 254, 0.55);
+  color: var(--text-main) !important;
+  font-weight: 600;
+}
+
+/* =========================================
+   HERO / SECTIONS
+========================================= */
+
+.hero {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.section-title {
+  font-weight: 800;
+}
+
+/* =========================================
+   CARDS
+========================================= */
+
+.card {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* kleine badge in accentkleur */
+.badge-tech {
+  background: var(--tv-blue);
+  color: #ffffff;
+}
+
+/* =========================================
+   MAP
+========================================= */
+
+.map-wrapper {
+  height: 320px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-soft);
+  overflow: hidden;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  background: var(--bg-nav);
+  color: #ffffff;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Als je ergens bg-light op footer/container-fluid gebruikt */
+footer.bg-light,
+.container-fluid.bg-light {
+  background-color: var(--bg-surface) !important;
+  color: var(--text-main) !important;
+  border-top: 1px solid var(--border-soft);
+}
+
+/* =========================================
+   FIGURE
+========================================= */
 
 figure {
   margin: 0 0 1rem;
@@ -94,22 +185,136 @@ figure {
 
 figcaption {
   font-size: 0.875rem;
-  color: #6c757d;
+  color: var(--text-muted);
 }
 
-/* kleine helper voor placeholder images */
+/* =========================================
+   HELPERS
+========================================= */
 
 .placeholder-img {
   width: 100%;
   height: auto;
 }
 
-:root {
-  --tv-blue: #3190fe;
+
+/* =========================================
+   FORMS (Light + Dark)
+========================================= */
+
+/* Labels en form-tekst */
+.form-label {
+  color: var(--text-main);
 }
 
-/* eigen blauwe achtergrond voor de navbar */
-.bg-tv-blue {
-  background-color: var(--tv-blue) !important;
+/* Inputs / textarea / select */
+.form-control,
+.form-select {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--border-soft);
 }
 
+/* Placeholder */
+.form-control::placeholder {
+  color: var(--text-muted);
+  opacity: 1; /* consistent over browsers */
+}
+
+/* Focus state (subtiele “brand” glow) */
+.form-control:focus,
+.form-select:focus {
+  border-color: rgba(49, 144, 254, 0.7);
+  box-shadow: 0 0 0 0.2rem rgba(49, 144, 254, 0.2);
+}
+
+/* Disabled state */
+.form-control:disabled,
+.form-select:disabled {
+  opacity: 0.7;
+}
+
+/* =========================================
+   DARK MODE SPECIFIEK (extra contrast)
+========================================= */
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: #0b1220; /* iets donkerder dan surface voor duidelijk veld */
+  color: var(--text-main);
+  border-color: var(--border-soft);
+}
+
+body.dark-mode .form-control::placeholder {
+  color: var(--text-muted);
+}
+
+/* Autofill fix (Chrome) */
+body.dark-mode input:-webkit-autofill,
+body.dark-mode textarea:-webkit-autofill,
+body.dark-mode select:-webkit-autofill {
+  -webkit-text-fill-color: var(--text-main);
+  transition: background-color 9999s ease-in-out 0s;
+  box-shadow: 0 0 0px 1000px #0b1220 inset;
+}
+
+/* =========================================
+   BUTTONS (optioneel: consistent met theme)
+========================================= */
+
+/* Als je een eigen btn-tv gebruikt */
+.btn-tv {
+  background-color: var(--tv-blue);
+  border-color: var(--tv-blue);
+  color: #ffffff;
+}
+
+.btn-tv:hover,
+.btn-tv:focus {
+  filter: brightness(0.95);
+}
+
+
+/* =========================================
+   ACCORDION (Mijn aanpak) – DARK MODE FIX
+========================================= */
+
+/* Accordion container */
+.accordion-item {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-soft);
+}
+
+/* Titelknop */
+.accordion-button {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+}
+
+/* Hover */
+.accordion-button:hover {
+  background-color: rgba(49, 144, 254, 0.08);
+}
+
+/* Actieve (open) accordion titel */
+.accordion-button:not(.collapsed) {
+  background-color: rgba(49, 144, 254, 0.15);
+  color: var(--text-main);
+  box-shadow: none;
+}
+
+/* Body (inhoud) */
+.accordion-body {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+}
+
+/* Donkere chevron corrigeren */
+.accordion-button::after {
+  filter: invert(0);
+}
+
+/* Chevron in dark mode zichtbaar maken */
+body.dark-mode .accordion-button::after {
+  filter: invert(1);
+}
