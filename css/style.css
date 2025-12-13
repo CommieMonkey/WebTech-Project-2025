@@ -318,3 +318,96 @@ body.dark-mode select:-webkit-autofill {
 body.dark-mode .accordion-button::after {
   filter: invert(1);
 }
+
+
+
+/* =========================
+   NAVBAR: fixed + rounding + shadow
+========================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  border-radius: 0 0 1rem 1rem; /* afgerond onderaan */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Optioneel: iets minder harde randen op de container in de navbar */
+.navbar .container-fluid {
+  border-radius: 1rem;
+}
+
+/* =========================
+   NAVBAR: Mobile collapse = grid layout
+========================= */
+@media (max-width: 767.98px) {
+  /* geef het collapse-blok ruimte */
+  .navbar-collapse {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  /* Maak van de nav-items een grid */
+  .navbar-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 kolommen */
+    gap: 0.5rem;
+  }
+
+  /* Laat knoppen netjes volledig breed in hun grid-cel */
+  .navbar .nav-link {
+    width: 100%;
+    text-align: center;
+    margin: 0; /* grid regelt spacing */
+  }
+}
+
+/* Voor iets bredere mobieltjes/kleine tablets kan je 3 kolommen doen */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .navbar-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+body.dark-mode .navbar {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+
+/* Aside: nette tekstflow en consistente spacing */
+aside {
+  word-break: normal;
+}
+
+aside a {
+  word-break: break-word;     /* breek alleen als nodig */
+  overflow-wrap: anywhere;    /* voorkomt layout jumps */
+}
+
+/* Maak contactregels in aside stabiel */
+.aside-contact {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.aside-contact a {
+  display: inline-block;
+}
+
+
+
+/* Logo switching */
+.logo { display: none; height: 42px; width: auto; }
+
+body:not(.dark-mode) .logo-light { display: inline-block; }
+body.dark-mode       .logo-dark  { display: inline-block; }
+
+/* optioneel: iets mooiere alignment */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
