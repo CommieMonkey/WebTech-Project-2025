@@ -70,7 +70,7 @@ function calcEstimate(pkgKey, pages, features, deadlineKey) {
 function buildMailto(summaryText) {
     const subject = encodeURIComponent("Website aanvraag – intake samenvatting");
     const body = encodeURIComponent(summaryText);
-    return `mailto:?subject=${subject}&body=${body}`;
+    return `mailto:thomasvanaert03@gmail.com?subject=${subject}&body=${body}`;
 }
 
 document.addEventListener("DOMContentLoaded", () => {

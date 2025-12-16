@@ -1,7 +1,6 @@
 /* =========================================
    THEME (Light default) + Dark variant
 ========================================= */
-
 :root {
   /* Brand */
   --tv-blue: #3190fe;
@@ -36,7 +35,6 @@ body.dark-mode {
 /* =========================================
    BASE
 ========================================= */
-
 body {
   background: var(--bg-main);
   color: var(--text-main);
@@ -47,7 +45,7 @@ main {
   padding-bottom: 2rem;
 }
 
-/* Content “canvas” (jouw afgeronde witte vlak) */
+/* Content canvas */
 .container {
   background-color: var(--bg-surface);
   border-radius: var(--radius-lg);
@@ -61,19 +59,48 @@ main {
 }
 
 /* =========================================
-   NAVBAR (buttons)
+   NAVBAR (buttons + sticky)
 ========================================= */
-
 .navbar,
 .bg-tv-blue {
   background-color: var(--bg-nav) !important;
 }
 
-.navbar-brand {
-  font-weight: 700;
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
-/* maak van links duidelijke knoppen */
+body.dark-mode .navbar {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Brand + logo */
+.navbar-brand {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  display: none;
+  height: 42px;
+  width: auto;
+}
+
+body:not(.dark-mode) .logo-light {
+  display: inline-block;
+}
+
+body.dark-mode .logo-dark {
+  display: inline-block;
+}
+
+/* Nav links as buttons */
 .navbar .nav-link {
   display: inline-block;
   padding: 0.45rem 0.85rem;
@@ -109,10 +136,133 @@ body.dark-mode .navbar .nav-link[aria-current="page"] {
   font-weight: 600;
 }
 
+/* Dropdown toggle should look like a button too */
+.navbar .dropdown-toggle {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-sm);
+}
+
+/* =========================================
+   DROPDOWNS – Desktop theme-aware
+========================================= */
+@media (min-width: 768px) {
+  .navbar .dropdown-menu {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 0.75rem;
+    padding: 0.4rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .navbar .dropdown-item {
+    color: var(--text-main);
+    border-radius: 0.6rem;
+    padding: 0.45rem 0.75rem;
+  }
+
+  .navbar .dropdown-item:hover,
+  .navbar .dropdown-item:focus {
+    background-color: rgba(49, 144, 254, 0.12);
+    color: var(--text-main);
+  }
+
+  .navbar .dropdown-item.active {
+    background-color: rgba(49, 144, 254, 0.25);
+    font-weight: 600;
+  }
+
+  body.dark-mode .navbar .dropdown-menu {
+    background-color: #0b1220;
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  body.dark-mode .navbar .dropdown-item {
+    color: #e5e7eb;
+  }
+
+  body.dark-mode .navbar .dropdown-item:hover,
+  body.dark-mode .navbar .dropdown-item:focus {
+    background-color: rgba(49, 144, 254, 0.25);
+    color: #ffffff;
+  }
+
+  body.dark-mode .navbar .dropdown-item.active {
+    background-color: #3190fe;
+    color: #ffffff;
+  }
+}
+
+/* =========================================
+   NAVBAR – Mobile layout (grid + dropdown as card)
+========================================= */
+@media (max-width: 767.98px) {
+  .navbar-collapse {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .navbar-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    align-items: start;
+  }
+
+  .navbar .nav-link {
+    width: 100%;
+    text-align: center;
+    margin: 0 !important; /* grid controls spacing */
+  }
+
+  .navbar .dropdown-toggle {
+    width: 100%;
+  }
+
+  /* dropdown menu in mobile: in-flow card under button */
+  .navbar .dropdown-menu {
+    position: static !important;
+    width: 100%;
+    margin-top: 0.35rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 0.35rem;
+  }
+
+  .navbar .dropdown-item {
+    border-radius: 0.6rem;
+    padding: 0.45rem 0.6rem;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .navbar .dropdown-item:hover,
+  .navbar .dropdown-item:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+  }
+
+  .navbar .dropdown-item.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    font-weight: 600;
+  }
+
+  body.dark-mode .navbar .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.20);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* 3 columns on larger phones */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .navbar-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 /* =========================================
    HERO / SECTIONS
 ========================================= */
-
 .hero {
   background: var(--bg-surface);
   border: 1px solid var(--border-soft);
@@ -127,7 +277,6 @@ body.dark-mode .navbar .nav-link[aria-current="page"] {
 /* =========================================
    CARDS
 ========================================= */
-
 .card {
   background-color: var(--bg-surface);
   color: var(--text-main);
@@ -136,7 +285,6 @@ body.dark-mode .navbar .nav-link[aria-current="page"] {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-/* kleine badge in accentkleur */
 .badge-tech {
   background: var(--tv-blue);
   color: #ffffff;
@@ -145,7 +293,6 @@ body.dark-mode .navbar .nav-link[aria-current="page"] {
 /* =========================================
    MAP
 ========================================= */
-
 .map-wrapper {
   height: 320px;
   border-radius: var(--radius-md);
@@ -156,7 +303,6 @@ body.dark-mode .navbar .nav-link[aria-current="page"] {
 /* =========================================
    FOOTER
 ========================================= */
-
 footer {
   background: var(--bg-nav);
   color: #ffffff;
@@ -167,7 +313,7 @@ footer a {
   text-decoration: underline;
 }
 
-/* Als je ergens bg-light op footer/container-fluid gebruikt */
+/* If bg-light used on footer/container-fluid */
 footer.bg-light,
 .container-fluid.bg-light {
   background-color: var(--bg-surface) !important;
@@ -178,7 +324,6 @@ footer.bg-light,
 /* =========================================
    FIGURE
 ========================================= */
-
 figure {
   margin: 0 0 1rem;
 }
@@ -191,23 +336,39 @@ figcaption {
 /* =========================================
    HELPERS
 ========================================= */
-
 .placeholder-img {
   width: 100%;
   height: auto;
 }
 
+/* =========================================
+   ASIDE helpers
+========================================= */
+aside {
+  word-break: normal;
+}
+
+aside a {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.aside-contact {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.aside-contact a {
+  display: inline-block;
+}
 
 /* =========================================
    FORMS (Light + Dark)
 ========================================= */
-
-/* Labels en form-tekst */
 .form-label {
   color: var(--text-main);
 }
 
-/* Inputs / textarea / select */
 .form-control,
 .form-select {
   background-color: var(--bg-surface);
@@ -215,38 +376,27 @@ figcaption {
   border: 1px solid var(--border-soft);
 }
 
-/* Placeholder */
 .form-control::placeholder {
   color: var(--text-muted);
-  opacity: 1; /* consistent over browsers */
+  opacity: 1;
 }
 
-/* Focus state (subtiele “brand” glow) */
 .form-control:focus,
 .form-select:focus {
   border-color: rgba(49, 144, 254, 0.7);
   box-shadow: 0 0 0 0.2rem rgba(49, 144, 254, 0.2);
 }
 
-/* Disabled state */
 .form-control:disabled,
 .form-select:disabled {
   opacity: 0.7;
 }
 
-/* =========================================
-   DARK MODE SPECIFIEK (extra contrast)
-========================================= */
-
 body.dark-mode .form-control,
 body.dark-mode .form-select {
-  background-color: #0b1220; /* iets donkerder dan surface voor duidelijk veld */
+  background-color: #0b1220;
   color: var(--text-main);
   border-color: var(--border-soft);
-}
-
-body.dark-mode .form-control::placeholder {
-  color: var(--text-muted);
 }
 
 /* Autofill fix (Chrome) */
@@ -259,10 +409,8 @@ body.dark-mode select:-webkit-autofill {
 }
 
 /* =========================================
-   BUTTONS (optioneel: consistent met theme)
+   BUTTONS
 ========================================= */
-
-/* Als je een eigen btn-tv gebruikt */
 .btn-tv {
   background-color: var(--tv-blue);
   border-color: var(--tv-blue);
@@ -274,140 +422,38 @@ body.dark-mode select:-webkit-autofill {
   filter: brightness(0.95);
 }
 
-
 /* =========================================
-   ACCORDION (Mijn aanpak) – DARK MODE FIX
+   ACCORDION (Mijn aanpak)
 ========================================= */
-
-/* Accordion container */
 .accordion-item {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-soft);
 }
 
-/* Titelknop */
 .accordion-button {
   background-color: var(--bg-surface);
   color: var(--text-main);
 }
 
-/* Hover */
 .accordion-button:hover {
   background-color: rgba(49, 144, 254, 0.08);
 }
 
-/* Actieve (open) accordion titel */
 .accordion-button:not(.collapsed) {
   background-color: rgba(49, 144, 254, 0.15);
   color: var(--text-main);
   box-shadow: none;
 }
 
-/* Body (inhoud) */
 .accordion-body {
   background-color: var(--bg-surface);
   color: var(--text-main);
 }
 
-/* Donkere chevron corrigeren */
 .accordion-button::after {
   filter: invert(0);
 }
 
-/* Chevron in dark mode zichtbaar maken */
 body.dark-mode .accordion-button::after {
   filter: invert(1);
-}
-
-
-
-/* =========================
-   NAVBAR: fixed + rounding + shadow
-========================= */
-
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1030;
-  border-radius: 0 0 1rem 1rem; /* afgerond onderaan */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-/* Optioneel: iets minder harde randen op de container in de navbar */
-.navbar .container-fluid {
-  border-radius: 1rem;
-}
-
-/* =========================
-   NAVBAR: Mobile collapse = grid layout
-========================= */
-@media (max-width: 767.98px) {
-  /* geef het collapse-blok ruimte */
-  .navbar-collapse {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
-  /* Maak van de nav-items een grid */
-  .navbar-nav {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 kolommen */
-    gap: 0.5rem;
-  }
-
-  /* Laat knoppen netjes volledig breed in hun grid-cel */
-  .navbar .nav-link {
-    width: 100%;
-    text-align: center;
-    margin: 0; /* grid regelt spacing */
-  }
-}
-
-/* Voor iets bredere mobieltjes/kleine tablets kan je 3 kolommen doen */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .navbar-nav {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-
-body.dark-mode .navbar {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-}
-
-
-
-/* Aside: nette tekstflow en consistente spacing */
-aside {
-  word-break: normal;
-}
-
-aside a {
-  word-break: break-word;     /* breek alleen als nodig */
-  overflow-wrap: anywhere;    /* voorkomt layout jumps */
-}
-
-/* Maak contactregels in aside stabiel */
-.aside-contact {
-  display: grid;
-  gap: 0.35rem;
-}
-
-.aside-contact a {
-  display: inline-block;
-}
-
-
-
-/* Logo switching */
-.logo { display: none; height: 42px; width: auto; }
-
-body:not(.dark-mode) .logo-light { display: inline-block; }
-body.dark-mode       .logo-dark  { display: inline-block; }
-
-/* optioneel: iets mooiere alignment */
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }

@@ -37,15 +37,81 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="portfolio.html">Projecten</a></li>
-        <li class="nav-item"><a class="nav-link" href="over-mij.html">Over mij</a></li>
-        <li class="nav-item"><a class="nav-link" href="skills.html">Vaardigheden</a></li>
-        <li class="nav-item"><a class="nav-link" href="aanpak.html">Mijn aanpak</a></li>
-        <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-        <li class="nav-item"><a class="nav-link" href="tech.html">Tech</a></li>
-        <li class="nav-item"><a class="nav-link active" href="diensten.html">Diensten</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+        <!-- Home -->
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <!-- Projecten -->
+        <li class="nav-item">
+          <a class="nav-link" href="portfolio.html">Projecten</a>
+        </li>
+
+        <!-- Dropdown: IT-profiel -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             id="navbarProfile"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Profiel (IT)
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarProfile">
+            <li>
+              <a class="dropdown-item" href="over-mij.html">
+                Over mij
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="skills.html">
+                Vaardigheden
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="cv.html">
+                CV
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Dropdown: Freelance / samenwerking -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             id="navbarServices"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Samenwerken
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarServices">
+            <li>
+              <a class="dropdown-item active" href="diensten.html">
+                Diensten
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="aanpak.html">
+                Mijn aanpak
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="tech.html">
+                Tech lab
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Contact -->
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
+        <!-- Dark mode toggle -->
         <li class="nav-item">
           <button id="themeToggle"
                   class="btn btn-outline-light btn-sm ms-2"
@@ -56,6 +122,7 @@
         </li>
 
       </ul>
+
     </div>
   </div>
 </nav>
